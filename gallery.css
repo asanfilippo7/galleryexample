@@ -30,11 +30,13 @@
 .featured-gallery h1 {
   font-size:40px;
   text-aligh:left;
+  line-height:0.5;
 }
 
 .featured-gallery h3 {
   font-size:20px;
   text-aligh:left;
+  line-height:0.5;
 }
 
 .featured-picture {
