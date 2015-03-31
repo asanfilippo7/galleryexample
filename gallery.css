@@ -2,6 +2,7 @@
   width:70%;
   margin-left:15%;
   display:inline-block;
+  font-family:"Helvetica";
 }
 
 .header {
@@ -17,4 +18,16 @@
   height:800px;
   width:300px;
   background-color:#e8e8e8;
+}
+
+.featured-gallery {
+  width: 600px;
+  float:left;
+  height: 500px;
+  background-color:#e8e8e8;
+}
+
+.featured-gallery h1 {
+  font-size:"40px";
+  text-aligh:left;
 }
