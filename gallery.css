@@ -39,10 +39,12 @@
   line-height:0.5;
 }
 
-.featured-gallery p {
-  text-align:right;
+.credit {
+  float:right;
   font-size:20px;
   line-height:0.5;
+  height:60px;
+  width:150px;
 }
 
 .social-media {
