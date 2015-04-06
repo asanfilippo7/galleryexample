@@ -1,21 +1,62 @@
-<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["bar"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['School', 'Average Salary', 'Highest Salary'],
+          ['Law', 133134.26, 495000],
+          ['McIntire', 129516.47, 442900],
+          ['Batten', 123839.46, 353100],
+          ['Darden', 111683.13, 518900],
+          ['Engr', 93963.29, 336000],
+          ['CLAS', 85329.62, 430000],
+          ['Arch', 78811.98, 270000],
+          ['Curry', 78927.03, 372300],
+          ['Medical', 78706.48, 561100],
+          ['Nursing', 77652.76, 336000]
+        ]);
 
+        var options = {
+          chart: {
+            title: 'Average and Maximum Salary By School, 2014-2015',
+            subtitle: 'A comparison of earnings by acadmic division',
+          },
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
 
-<TITLE>Example CD Gallery</TITLE>
-<link rel="stylesheet" href="gallery.css">
-</head>
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
-<body>
+        chart.draw(data, options);
+      }
+    </script>
 
-<div id="container">
-
-  <div class="header"></div>
-  <div class="featured-gallery"><h3>Featured Gallery</h3><h1>Gallery Title</h1><div class="credit">by Photographer's Name</div><div class="social-media"></div><div class="featured-picture"></div></div>
-  <div class="sidebar"></div>
-  
-</div>
-
-</body>
+    </head>
+  <body>
+     <div id="barchart_material" style="width: 900px; height: 700px;"></div>
+  </body>
 </html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+
+
+<!--<TITLE>Example CD Gallery</TITLE>-->
+<!--<link rel="stylesheet" href="gallery.css">-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<div id="container">-->
+
+<!--  <div class="header"></div>-->
+<!--  <div class="featured-gallery"><h3>Featured Gallery</h3><h1>Gallery Title</h1><div class="credit">by Photographer's Name</div><div class="social-media"></div><div class="featured-picture"></div></div>-->
+<!--  <div class="sidebar"></div>-->
+  
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
